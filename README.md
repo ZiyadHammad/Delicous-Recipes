@@ -109,19 +109,14 @@ www.themealdb.com/api/json/v1/1/random.php
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Adding Form | H | 3hrs| 3.5hrs |  |
+| Building HTML content | H | 3hrs| 2.5hrs |  |
+| Working with API | H | 3hrs| 2.5hrs |  |
+| Appending data to page| H | 3hrs| 2.5hrs |  |
+| Styling the form| H | 3hrs| 2.5hrs |  |
+| styling the appended data | H | 3hrs| 2.5hrs |  |
+
+| Total | H | 18hrs| 17.5hrs |  |
 
 ## Code Snippet
 
