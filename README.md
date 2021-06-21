@@ -115,8 +115,11 @@ www.themealdb.com/api/json/v1/1/random.php
 | Appending data to page| H | 3hrs| 2.5hrs |  |
 | Styling the form| H | 3hrs| 2.5hrs |  |
 | styling the appended data | H | 3hrs| 2.5hrs |  |
+| Adding background images | H | 3hrs| 2.5hrs |  |
+| Appending youtube links| H | 3hrs| 2.5hrs |  |
+| Adding a category list for food items | H | 3hrs| 2.5hrs |  |
 
-| Total | H | 18hrs| 17.5hrs |  |
+| Total | H | 27hrs| 26hrs |  |
 
 ## Code Snippet
 
