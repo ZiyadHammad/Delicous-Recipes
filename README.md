@@ -74,7 +74,7 @@ www.themealdb.com/api/json/v1/1/random.php
 
 ## Wireframes
 
-https://wireframe.cc/gDFumT
+![Wireframe](./assets/WireFrame.png)
 
 
 #### MVP 
@@ -102,7 +102,7 @@ https://wireframe.cc/gDFumT
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+![Wireframe](./assets/Matrix.png)
 
 ## Timeframes
 
