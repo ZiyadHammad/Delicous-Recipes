@@ -11,9 +11,21 @@ const randomRecipes = async () => {
     let mealData = (response.data.meals[0])
     console.log(mealData)
     for (let i = 0; i < mealData.length; i++) {
+
       let foodName = document.createElement(`h5`)
-      foodName.textContent = mealData.strInstructions
+      foodName.textContent = mealData.strMeal
       foodList.appendChild(foodName)
+
+      let foodImage = document.querySelector(`img`)
+      foodImage.setAttribute(`src`, mealData.strMealThumb)
+      foodList.appendChild(foodImage)
+
+      let recipe = document.querySelector(`p`)
+      recipe.textContent = mealData.strInstructions
+      foodList.appendChild(recipe)
+      
+
+
 
 
 

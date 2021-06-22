@@ -1,9 +1,24 @@
-body {
+body, html{
+  background-image: url("http://www1.sunybroome.edu/wp-content/uploads/2018/11/culinary-cuttingboard.jpg") ;
   text-align: center;
+  background-size: cover;
+  height: 100%;
 }
 
 
 
 img {
-  height: 200px
+  height: 200px;
+  border-radius: 9%;
+  
+}
+
+#random {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h3 { 
+  color: white;
+
 }
