@@ -11,7 +11,7 @@ The Delicous Recipes project will allow user to click a random button to generat
 ## API and Data Sample
 www.themealdb.com/api/json/v1/1/random.php
 
-{
+```{
     "meals": [
         {
             "idMeal": "52882",
@@ -102,7 +102,7 @@ www.themealdb.com/api/json/v1/1/random.php
 
 ## Priority Matrix
 
-![Wireframe](./assets/Matrix.png)
+![Wireframe](./assets/matrix2.png)
 
 ## Timeframes
 
