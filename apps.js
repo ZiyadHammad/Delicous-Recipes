@@ -23,7 +23,7 @@ const randomRecipes = async () => {
       foodDiv.append(mealName)
 
       let foodPics = document.createElement(`img`)
-      foodPics.setAttribute(`src`, `https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg`)
+      foodPics.setAttribute(`src`, mealData[i].strMealThumb)
       foodDiv.append(foodPics)
 
       let foodRecipe = document.createElement(`p`)

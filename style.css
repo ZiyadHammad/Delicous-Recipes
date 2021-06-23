@@ -1,10 +1,30 @@
 body, html{
-  background-image: url("http://www1.sunybroome.edu/wp-content/uploads/2018/11/culinary-cuttingboard.jpg") ;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),url("http://www1.sunybroome.edu/wp-content/uploads/2018/11/culinary-cuttingboard.jpg") ;
   text-align: center;
   background-size: cover;
   height: 100%;
 }
 
+button:hover {
+  background-color: lightblue;
+
+}
+
+ .main {
+  display: flex;
+  flex-direction: column;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  
+} 
+h3 {
+  color: silver
+}
+h1 {
+  color: gold;  
+}
 
 
 img {
@@ -13,12 +33,12 @@ img {
   
 }
 
-#random {
-  display: flex;
-  justify-content: center;
+p {
+  color: silver;
 }
 
-h1, h3 { 
-  color: white;
-
+.food-list {
+  border-style: solid;
+  border-color: silver;
+  border-width: 5px;
 }
