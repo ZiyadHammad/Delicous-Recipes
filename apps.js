@@ -9,26 +9,26 @@ const randomRecipes = async () => {
     let response = await axios.get(urlLink)
     // console.log(response.data)
     let mealData = response.data.meals
-    // console.log(mealData)
+    console.log(mealData)
     for (let i = 0; i < mealData.length; i++) {
-      // console.log(mealData[i].strInstructions)
+      console.log(mealData[i].strInstructions)
 
 
-      let food = document.createElement(`div`)
+      let foodDiv = document.createElement(`div`)
       // console.log(foodData)
-      foodList.appendChild(food)
+      foodList.appendChild(foodDiv)
 
       let mealName = document.createElement(`h3`)
       mealName.textContent = mealData[i].strMeal
-      food.append(mealName)
+      foodDiv.append(mealName)
 
       let foodPics = document.createElement(`img`)
       foodPics.setAttribute(`src`, `https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg`)
-      food.append(foodPics)
+      foodDiv.append(foodPics)
 
       let foodRecipe = document.createElement(`p`)
       foodRecipe.textContent = mealData[i].strInstructions
-      food.append(foodRecipe)
+      foodDiv.append(foodRecipe)
 
 
     }
@@ -50,9 +50,8 @@ button.addEventListener(`click`, () => {
 })
 
 function removeFood() {
-  while (foodList.lastchild) {
+  while (foodList.lastChild) {
     foodList.removeChild(foodList.lastChild)
-
   }
   
 }
