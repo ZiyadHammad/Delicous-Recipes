@@ -8,23 +8,49 @@ body, html{
   height: 100%;
 }
 
-button:hover {
-  background-color: lightblue;
+button {
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
 
+}
+button:hover{
+  background-color: lightblue;
 }
 
  .main {
   display: flex;
   flex-direction: column;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 20px;
+  
   
 } 
 h3 {
-  color: silver
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: gold;
+  flex-flow: column;
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+
+}
+h2 {
+  color: red;
 }
 h1 {
   color: gold;  
+  height: 80px;
+  font-family: 'Satisfy', cursive;
 }
+.header {
+  font-size: 100px;
+}
+
 
 
 img {
@@ -34,21 +60,42 @@ img {
 }
 
 p {
-  color: silver;
+  color: gold;
+font-family: 'Satisfy', cursive;
 }
 
 .food-list {
   border-style: solid;
-  border-color: silver;
+  border-color: gold;
   border-width: 5px;
-  border-radius: 5px;
+  border-radius: 100px;
+  padding: 50px;
+  background-color: black;
+}
+nav {
+  display: flex;
+  color: gold;
+  flex-flow: row;
+  justify-content: flex-end;
+
+
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 713px) {
   body,html {
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ), url("https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  }
+  .header{
+    height: min-content;
+    font-size: 50px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  h3{
+    font-size: 25px;
   }
 }

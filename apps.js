@@ -1,37 +1,40 @@
 let urlLink = ("https://www.themealdb.com/api/json/v1/1/random.php")
 
 let foodList = document.querySelector(`.food-list`)
-let button = document.querySelector(`button`)
+let random = document.querySelector(`#random`)
+let home = document.querySelector(`#home`)
 
 
 const randomRecipes = async () => {
   try {
     let response = await axios.get(urlLink)
-    // console.log(response.data)
-    let mealData = response.data.meals
+    
+    let mealData = response.data.meals[0]
     console.log(mealData)
-    for (let i = 0; i < mealData.length; i++) {
-      console.log(mealData[i].strInstructions)
-
+    
 
       let foodDiv = document.createElement(`div`)
       // console.log(foodData)
       foodList.appendChild(foodDiv)
 
       let mealName = document.createElement(`h3`)
-      mealName.textContent = mealData[i].strMeal
+      mealName.textContent = mealData.strMeal
       foodDiv.append(mealName)
 
       let foodPics = document.createElement(`img`)
-      foodPics.setAttribute(`src`, mealData[i].strMealThumb)
+      foodPics.setAttribute(`src`, mealData.strMealThumb)
       foodDiv.append(foodPics)
 
       let foodRecipe = document.createElement(`p`)
-      foodRecipe.textContent = mealData[i].strInstructions
+      foodRecipe.textContent = mealData.strInstructions
       foodDiv.append(foodRecipe)
 
+      let youtube = document.createElement(`iframe`)
+      youtube.textContent = mealData.strYoutube
+      foodDiv.append(youtube)
 
-    }
+
+    
     return mealData
 
 
@@ -43,8 +46,9 @@ const randomRecipes = async () => {
 
 }
 
+home.addEventListener(`click`, removeFood)
 
-button.addEventListener(`click`, () => {
+random.addEventListener(`click`, () => {
   removeFood()
   randomRecipes()
 })
@@ -53,7 +57,7 @@ function removeFood() {
   while (foodList.lastChild) {
     foodList.removeChild(foodList.lastChild)
   }
-  
+
 }
 
 
