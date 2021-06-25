@@ -3,7 +3,8 @@ let urlLink = ("https://www.themealdb.com/api/json/v1/1/random.php")
 let foodList = document.querySelector(`.food-list`)
 let random = document.querySelector(`#random`)
 let home = document.querySelector(`#home`)
-
+let save = document.querySelector(`#fav`)
+let storedRecipe = localStorage.getItem(`content`)
 
 const randomRecipes = async () => {
   try {
@@ -29,11 +30,7 @@ const randomRecipes = async () => {
       foodRecipe.textContent = mealData.strInstructions
       foodDiv.append(foodRecipe)
 
-      let youtube = document.createElement(`iframe`)
-      youtube.textContent = mealData.strYoutube
-      foodDiv.append(youtube)
-
-
+      
     
     return mealData
 
@@ -60,7 +57,15 @@ function removeFood() {
 
 }
 
+const saveToLocalStorage = () => {
+  localStorage.setItem(`content`, foodList.textContent)
+}
 
+save.addEventListener(`click`, saveToLocalStorage)
+
+if (storedRecipe) {
+  foodList.textContent = storedRecipe
+}
 
 
 

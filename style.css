@@ -6,6 +6,7 @@ body, html{
   text-align: center;
   background-size: cover;
   height: 100%;
+  background-color: transparent;
 }
 
 button {
@@ -56,8 +57,10 @@ h1 {
 img {
   height: 200px;
   border-radius: 9%;
-  
-}
+  background-color: transparent;
+} 
+
+
 
 p {
   color: gold;
@@ -79,6 +82,17 @@ nav {
   justify-content: flex-end;
 
 
+}
+#fav{
+  border-radius: 50%;
+  height: 50px;
+  width: 150px;
+  font-family: 'Satisfy', cursive;
+  font-size: 22px;
+}
+
+#fav:hover{
+  background-color: lightblue;
 }
 
 @media only screen and (max-width: 713px) {
