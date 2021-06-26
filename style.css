@@ -80,7 +80,13 @@ nav {
   color: gold;
   flex-flow: row;
   justify-content: flex-end;
-
+}
+#home{
+  margin: 10px 10px 10px 10px;
+}
+#recipes{
+  margin: 10px 10px 10px 10px;
+  
 
 }
 #fav{

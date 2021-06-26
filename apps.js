@@ -1,37 +1,52 @@
 let urlLink = ("https://www.themealdb.com/api/json/v1/1/random.php")
+let urlLink2 = ("https://www.themealdb.com/api/json/v1/1/lookup.php?i=")
 
 let foodList = document.querySelector(`.food-list`)
 let random = document.querySelector(`#random`)
 let home = document.querySelector(`#home`)
-let save = document.querySelector(`#fav`)
 let storedRecipe = localStorage.getItem(`content`)
+let favRecipes = localStorage.getItem(`content`) ? JSON.parse(localStorage.getItem(`content`)) : []
+console.log(favRecipes)
+
+// localStorage.clear()
 
 const randomRecipes = async () => {
   try {
     let response = await axios.get(urlLink)
-    
+
     let mealData = response.data.meals[0]
-    console.log(mealData)
-    
+    // console.log(mealData)
 
-      let foodDiv = document.createElement(`div`)
-      // console.log(foodData)
-      foodList.appendChild(foodDiv)
 
-      let mealName = document.createElement(`h3`)
-      mealName.textContent = mealData.strMeal
-      foodDiv.append(mealName)
+    let foodDiv = document.createElement(`div`)
+    // console.log(foodData)
+    foodList.appendChild(foodDiv)
 
-      let foodPics = document.createElement(`img`)
-      foodPics.setAttribute(`src`, mealData.strMealThumb)
-      foodDiv.append(foodPics)
 
-      let foodRecipe = document.createElement(`p`)
-      foodRecipe.textContent = mealData.strInstructions
-      foodDiv.append(foodRecipe)
+    let mealName = document.createElement(`h3`)
+    mealName.textContent = mealData.strMeal
+    foodDiv.append(mealName)
 
-      
-    
+    let foodPics = document.createElement(`img`)
+    foodPics.setAttribute(`src`, mealData.strMealThumb)
+    foodDiv.append(foodPics)
+
+    let foodRecipe = document.createElement(`p`)
+    foodRecipe.textContent = mealData.strInstructions
+    foodDiv.append(foodRecipe)
+
+    let save = document.createElement(`button`)
+    save.textContent = `Save Recipe`
+    save.id = mealData.idMeal
+    foodDiv.append(save)
+
+    save.addEventListener(`click`, (e) => {
+      e.target.id = save.id
+      saveToLocalStorage(e.target.id)
+      e.target.textContent = `Recipes Saved`
+    })
+
+
     return mealData
 
 
@@ -42,6 +57,26 @@ const randomRecipes = async () => {
   }
 
 }
+
+const favorites = async (favRecipes) => {
+  try {
+    favRecipes.forEach(async (recipe) => {
+      let response = await axios.get(`${urlLink2}${recipe}`)
+      console.log(response)
+
+      
+    });
+
+  }
+  catch (error) {
+    console.error(error)
+    
+  }
+  
+}
+favorites(favRecipes)
+
+
 
 home.addEventListener(`click`, removeFood)
 
@@ -57,11 +92,15 @@ function removeFood() {
 
 }
 
-const saveToLocalStorage = () => {
-  localStorage.setItem(`content`, foodList.textContent)
+
+
+const saveToLocalStorage = (id) => {
+  favRecipes.push(id)
+  localStorage.setItem(`content`, JSON.stringify(favRecipes))
+  // console.log(favRecipes)
 }
 
-save.addEventListener(`click`, saveToLocalStorage)
+
 
 if (storedRecipe) {
   foodList.textContent = storedRecipe
