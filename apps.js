@@ -6,6 +6,7 @@ let random = document.querySelector(`#random`)
 let home = document.querySelector(`#home`)
 let storedRecipe = localStorage.getItem(`content`)
 let favRecipes = localStorage.getItem(`content`) ? JSON.parse(localStorage.getItem(`content`)) : []
+let favList = document.querySelector(`.favorite-recipes`)
 console.log(favRecipes)
 
 // localStorage.clear()
@@ -52,7 +53,7 @@ const randomRecipes = async () => {
 
 
   } catch (error) {
-    console.log(error)
+    console.error(error)
 
   }
 
@@ -62,7 +63,25 @@ const favorites = async (favRecipes) => {
   try {
     favRecipes.forEach(async (recipe) => {
       let response = await axios.get(`${urlLink2}${recipe}`)
-      console.log(response)
+      // console.log(response.data.meals[0])
+      let favData = response.data.meals[0]
+      console.log(favData)
+      
+      let favDiv = document.createElement(`div`)
+      favList.appendChild(favDiv)
+
+      let favName = document.createElement(`h3`)
+      favName.textContent = favData.strMeal
+      console.log(favName)
+      favDiv.append(favName)
+
+      let favImg = document.createElement(`img`)
+      favImg.setAttribute(`src`, favData.strMealThumb)
+      favDiv.append(favImg)
+
+      let favInstr = document.createElement(`p`)
+      favInstr.textContent = favData.strInstructions
+      favDiv.append(favInstr)
 
       
     });

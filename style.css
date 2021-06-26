@@ -64,7 +64,8 @@ img {
 
 p {
   color: gold;
-font-family: 'Satisfy', cursive;
+  font-family: 'Mate SC', serif;
+  font-family: 'Satisfy', cursive;
 }
 
 .food-list {
@@ -74,6 +75,12 @@ font-family: 'Satisfy', cursive;
   border-radius: 100px;
   padding: 50px;
   background-color: black;
+  font-family: 'Mate SC', serif;
+  font-family: 'Satisfy', cursive;
+}
+p {
+  color: gold;
+  font-size: 20px;
 }
 nav {
   display: flex;
