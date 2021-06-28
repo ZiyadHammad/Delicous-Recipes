@@ -78,6 +78,17 @@ p {
   font-family: 'Mate SC', serif;
   font-family: 'Satisfy', cursive;
 }
+.favorite-recipes{
+  border-style: solid;
+  border-color: gold;
+  border-width: 5px;
+  border-radius: 100px;
+  padding: 50px;
+  background-color: black;
+  font-family: 'Mate SC', serif;
+  font-family: 'Satisfy', cursive;
+
+}
 p {
   color: gold;
   font-size: 20px;

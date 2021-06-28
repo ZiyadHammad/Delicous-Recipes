@@ -4,7 +4,6 @@ let urlLink2 = ("https://www.themealdb.com/api/json/v1/1/lookup.php?i=")
 let foodList = document.querySelector(`.food-list`)
 let random = document.querySelector(`#random`)
 let home = document.querySelector(`#home`)
-// let storedRecipe = localStorage.getItem(`content`)
 let favRecipes = localStorage.getItem(`content`) ? JSON.parse(localStorage.getItem(`content`)) : []
 let favList = document.querySelector(`.favorite-recipes`)
 console.log(favRecipes)
@@ -67,13 +66,13 @@ const favorites = async (favRecipes) => {
       let favData = response.data.meals[0]
       console.log(favData)
       
-      // let favDiv = document.createElement(`div`)
-      // favList.appendChild(favDiv)
+      let favDiv = document.createElement(`div`)
+      favList.appendChild(favDiv)
 
       let favName = document.createElement(`h3`)
       favName.textContent = favData.strMeal
       console.log(favName)
-      favList.append(favName)
+      favList.appendChild(favName)
 
       let favImg = document.createElement(`img`)
       favImg.setAttribute(`src`, favData.strMealThumb)
@@ -112,7 +111,7 @@ function removeFood() {
 }
 
 
-
+// 
 const saveToLocalStorage = (id) => {
   favRecipes.push(id)
   localStorage.setItem(`content`, JSON.stringify(favRecipes))
