@@ -2,7 +2,7 @@
 
 ## Project Name
 
-[Delicous Recipes} [title](https:///Users/ziyadhammad/General_Assembly/SEI/penguin/unit_1/week_3/monday/homework/Delicous-Recipes/index.html)
+[Delicous Recipes} [title](https://ziyadhammad.github.io/Delicous-Recipes/)
 
 ## Project Description
 Not sure what to eat? Need some inspiration?
