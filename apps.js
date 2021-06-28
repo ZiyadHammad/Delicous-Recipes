@@ -4,7 +4,7 @@ let urlLink2 = ("https://www.themealdb.com/api/json/v1/1/lookup.php?i=")
 let foodList = document.querySelector(`.food-list`)
 let random = document.querySelector(`#random`)
 let home = document.querySelector(`#home`)
-let storedRecipe = localStorage.getItem(`content`)
+// let storedRecipe = localStorage.getItem(`content`)
 let favRecipes = localStorage.getItem(`content`) ? JSON.parse(localStorage.getItem(`content`)) : []
 let favList = document.querySelector(`.favorite-recipes`)
 console.log(favRecipes)
@@ -67,21 +67,21 @@ const favorites = async (favRecipes) => {
       let favData = response.data.meals[0]
       console.log(favData)
       
-      let favDiv = document.createElement(`div`)
-      favList.appendChild(favDiv)
+      // let favDiv = document.createElement(`div`)
+      // favList.appendChild(favDiv)
 
       let favName = document.createElement(`h3`)
       favName.textContent = favData.strMeal
       console.log(favName)
-      favDiv.append(favName)
+      favList.append(favName)
 
       let favImg = document.createElement(`img`)
       favImg.setAttribute(`src`, favData.strMealThumb)
-      favDiv.append(favImg)
+      favList.append(favImg)
 
       let favInstr = document.createElement(`p`)
       favInstr.textContent = favData.strInstructions
-      favDiv.append(favInstr)
+      favList.append(favInstr)
 
       
     });
@@ -121,9 +121,6 @@ const saveToLocalStorage = (id) => {
 
 
 
-if (storedRecipe) {
-  foodList.textContent = storedRecipe
-}
 
 
 
@@ -139,7 +136,3 @@ if (storedRecipe) {
 
 
 
-
- // let randomNumber = Math.floor(Math.random() * mealData.length)
-    // let randomPick = mealData[randomNumber]
-    // console.log(randomPick)

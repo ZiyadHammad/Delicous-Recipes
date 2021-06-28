@@ -2,7 +2,7 @@
 
 ## Project Name
 
-[Delicous Recipes} (URL)
+[Delicous Recipes} [title](https:///Users/ziyadhammad/General_Assembly/SEI/penguin/unit_1/week_3/monday/homework/Delicous-Recipes/index.html)
 
 ## Project Description
 Not sure what to eat? Need some inspiration?
@@ -108,29 +108,32 @@ www.themealdb.com/api/json/v1/1/random.php
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs |  |
-| Building HTML content | H | 3hrs| 2.5hrs |  |
-| Working with API | H | 3hrs| 2.5hrs |  |
-| Appending data to page| H | 3hrs| 2.5hrs |  |
-| Styling the form| H | 3hrs| 2.5hrs |  |
-| styling the appended data | H | 3hrs| 2.5hrs |  |
-| Adding Local Storage | H | 3hrs| 2.5hrs |  |
-| Making sure all JS is functional | H | 3hrs| 2.5hrs |  |
-| Adding background images | H | 3hrs| 2.5hrs |  |
-| Appending youtube links| H | 3hrs| 2.5hrs |  |
-| Adding a category list for food items | H | 3hrs| 2.5hrs |  |
+| Adding Form | H | 3hrs| 3.5hrs | 5 |
+| Building HTML content | H | 3hrs| 4 |  |
+| Working with API | H | 3hrs| 2.5hrs | 4 |
+| Appending data to page| H | 3hrs| 2.5hrs | 4 |
+| Styling the form| H | 3hrs| 2.5hrs | 6 |
+| styling the appended data | H | 3hrs| 2.5hrs | 2 |
+| Adding Local Storage | H | 3hrs| 2.5hrs | 3 |
+| Making sure all JS is functional | H | 3hrs| 2.5hrs | 3 |
+| Adding background images | H | 3hrs| 2.5hrs | 2 |
+| Appending youtube links| H | 3hrs| 2.5hrs | 2 |
+| Adding a 2nd page for localStorage Data| H | 3hrs| 2.5hrs | 4 |
 
 
-| Total | H | 33hrs| 30hrs |  |
+
+| Total | H | 33hrs| 30hrs | 39 |
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+const saveToLocalStorage = (id) => {
+  favRecipes.push(id)
+  localStorage.setItem(`content`, JSON.stringify(favRecipes))
+  // console.log(favRecipes)
+} // Here is a function to set up local storage and to push all the fav Recipes into local storage
 ```
 
 ## Change Log
