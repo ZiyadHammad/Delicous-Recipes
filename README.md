@@ -93,11 +93,11 @@ www.themealdb.com/api/json/v1/1/random.php
  
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|June 23| Pseudocode / actual code | Incomplete
-|June 24| Initial Clickable Model  | Incomplete
-|June 25| MVP | Incomplete
+|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Complete
+|June 23| Pseudocode / actual code | Complete
+|June 24| Initial Clickable Model  | Complete
+|June 25| MVP | Complete
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
