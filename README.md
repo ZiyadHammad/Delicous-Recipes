@@ -109,7 +109,7 @@ www.themealdb.com/api/json/v1/1/random.php
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 3hrs| 3.5hrs | 5 |
-| Building HTML content | H | 3hrs| 4 |  |
+| Building HTML content | H | 3hrs| 3 | 4 |
 | Working with API | H | 3hrs| 2.5hrs | 4 |
 | Appending data to page| H | 3hrs| 2.5hrs | 4 |
 | Styling the form| H | 3hrs| 2.5hrs | 6 |
